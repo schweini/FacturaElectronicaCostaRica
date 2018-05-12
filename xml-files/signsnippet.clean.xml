@@ -1,0 +1,89 @@
+<foobar>
+
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+ <ds:SignedInfo>
+ <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+ <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+ <ds:Reference Id="r-id-1" Type="" URI="">
+ <ds:Transforms>
+ <ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">
+ <ds:XPath>not(ancestor-or-self::ds:Signature)</ds:XPath>
+ </ds:Transform>
+ <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+ </ds:Transforms>
+ <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+ <ds:DigestValue></ds:DigestValue>
+ </ds:Reference>
+ <ds:Reference Type="http://uri.etsi.org/01903#SignedProperties">
+ <ds:Transforms>
+ <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+ </ds:Transforms>
+ <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+ <ds:DigestValue></ds:DigestValue>
+ </ds:Reference>
+ </ds:SignedInfo>
+ <ds:SignatureValue></ds:SignatureValue>
+ <ds:KeyInfo>
+ <ds:X509Data>
+
+<ds:X509Certificate>MIIFpTCCBI2gAwIBAgIKK+xhaAABAARyvDANBgkqhkiG9w0BAQUFADCBmjEVMBMGA1UEBRMMNC0wMDAtMDA0MDE3MQs
+wCQYDVQQGEwJDUjEkMCIGA1UEChMbQkFOQ08gQ0VOVFJBTCBERSBDT1NUQSBSSUNBMSowKAYDVQQLEyFESVZJU0lPTiBERSBTRVJWSUNJT1MgRk
+lOQU5DSUVST1MxIjAgBgNVBAMTGUNBIFNJTlBFIC0gUEVSU09OQSBGSVNJQ0EwHhcNMTYwMjEyMTk0MTI2WhcNMTgwMjExMTk0MTI2WjCBszEZM
+BcGA1UEBRMQQ1BGLTAxLTEzMDItMDQ4NzEVMBMGA1UEBBMMTU9OR0UgQ0hBVkVTMRcwFQYDVQQqEw5NQVJWSU4gVklOSUNJTzELMAkGA1UEBhMC
+Q1IxFzAVBgNVBAoTDlBFUlNPTkEgRklTSUNBMRIwEAYDVQQLEwlDSVVEQURBTk8xLDAqBgNVBAMTI01BUlZJTiBWSU5JQ0lPIE1PTkdFIENIQVZ
+FUyAoRklSTUEpMIIBIjANBgkqhkiG9w0BAQE34ghAQ8AMIIBCgKCAQEAtMLNAbhh2TzTB+Q6TBgLHCQGtn73eyOMH2ESIuam9jrnx50gOxM13QD
+8vXw3fyiyFxvbkxmrVgmihsQ3DC3sVo7S+zwtgp40RiDhEEgSqg8JaZcU+BPiLTNmO0J9lKU9nvYrOCam02oxVNiBUxR8jq7QZ2yG4QREgCQ68/
+yXOdPLWAJf6afdxn2CiV1Tkeq11J+UDlPdWj65LG/JSQv1vJj0fGw3el/C+WDbIkY/g1ksZ44AdIJwSlhmgwrjOU7Z+bibbYdkN5Ky62bPvFk0i
+rI6/oWV9K8mBgzLla1Zyj7CI2k5hi6vQF0doDSE0js5dFTIwCUDIsHvo4WwFZegoQIDAQABo4IB0DCCAcwwHQYDVR0OBBYEFEy03328b5QRrhdn
+woLwjpwSNkfYMB8GA1UdIwQYMBaAFEjUipShoDKIP6qxNhCUK+6UQYKsMFwGA1UdHwRVMFMwUaBPoE2GS2h0dHA6Ly9mZGkuc2lucGUuZmkuY3I
+vcmVwb3NpdG9yaW8vQ0ElMjBTSU5QRSUyMC0lMjBQRVJTT05BJTIwRklTSUNBKDEpLmNybDCBkwYIKwYBBQUHAQEEgYYwgYMwKAYIKwYBBQUHMA
+GGHGh0dHA6Ly9vY3NwLnNpbnBlLmZpLmNyL29jc3AwVwYIKwYBBQUHMAKGS2h0dHA6Ly9mZGkuc2lucGUuZmkuY3IvcmVwb3NpdG9yaW8vQ0ElM
+jBTSU5QRSUyMC0lMjBQRVJTT05BJTIwRklTSUNBKDEpLmNydDAOBgNVHQ8BAf8EBAMCBsAwPQYJKAGCNxUHBDAwLgYmKwYBBAGCNxUIhcTqW4LR
+4zWVkRuC+ZcYhqXLa4F/gb3yRYe7oj4CAWQCAQQwEwYDVR0lBAwwCgYIKwYBBQUHAwQwFQYDVR0gBA4wDDAKBghggTwBAQEBAjAbBgkrBgEEAYI
+3FQoEDjAMMAoGCCsGAQUFBwMEMA0GCSqGSIb3DQEBBQUAA4IBAQBnHXQC+D4U7DdZuq0iaqOs4NTqrLfTkYGIo6adAnUWWpN/XjC4y/4EUjRSbh
+Qc/l2pRAlYG4pFJ1ftVvwSZMlcukHR/i6uLo1mWCE2SwWpKyw+5b58eHlJkomzExT92chv1gicHJdb7ZazXKa/0Bkf3+Olh9Nruqo2qs6uCetSc
+Cyqc+NTEwSTded4x+wbYIecElkxHje6pqr367zF0rL3khHJYPYCHsadOx0w9XR3K+yFsXksasZzBrsMzZ6/m3+23E0OC2oTb24/z3cn5dNm2y4H
+m/fxYl/CE3cQf5NOn7yt80Kdu+jaKDqIkGdSkuf6QppyoxkhuKK1x27fg</ds:X509Certificate>
+ </ds:X509Data>
+ </ds:KeyInfo>
+ <ds:Object>
+ <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#ide34ffbff277e8d1432e864436aa11882">
+ <xades:SignedProperties>
+ <xades:SignedSignatureProperties>
+ <xades:SigningTime>2016-11-25T16:35:06Z</xades:SigningTime>
+ <xades:SigningCertificate>
+ <xades:Cert>
+ <xades:CertDigest>
+ <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue></ds:DigestValue>
+ </xades:CertDigest>
+<xades:IssuerSerial>
+ <ds:X509IssuerName>CN=CA SINPE - PERSONA FISICA,OU=DIVISION DE SERVICIOS
+FINANCIEROS,O=BANCO CENTRAL DE COSTA RICA,C=CR,2.5.4.5=#130c342d3030302d303034303137</ds:X509IssuerName>
+ <ds:X509SerialNumber>207422209224813750547132</ds:X509SerialNumber>
+ </xades:IssuerSerial>
+ </xades:Cert>
+ </xades:SigningCertificate>
+<xades:SignaturePolicyIdentifier>
+ <xades:SignaturePolicyId>
+ <xades:SigPolicyId>
+ <xades:Identifier>https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.1/Resolucion_Comprobantes_Electronicos_DGT-R-48-2016.pdf</xades:Identifier>
+ </xades:SigPolicyId>
+<xades:SigPolicyHash>
+ <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue></ds:DigestValue>
+ </xades:SigPolicyHash>
+ </xades:SignaturePolicyId>
+ </xades:SignaturePolicyIdentifier>
+ </xades:SignedSignatureProperties>
+ <xades:SignedDataObjectProperties>
+ <xades:DataObjectFormat ObjectReference="#r-id-1">
+ <xades:MimeType>application/octet-stream</xades:MimeType>
+ </xades:DataObjectFormat>
+ </xades:SignedDataObjectProperties>
+ </xades:SignedProperties>
+ </xades:QualifyingProperties>
+ </ds:Object>
+</ds:Signature>
+</foobar>
+
