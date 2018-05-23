@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:t="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica"
+>
+
+<!-- 
+    Agregar lo siguiente como segunda linea del XML: 
+    <?xml-stylesheet type="text/xsl" href="xsl.test.xsl"?> 
+-->
+
+<xsl:template match="/">
+  <html>
+  <head>
+  </head>
+  <body>
+    <h2>Factura electronica</h2>
+    <div>
+        <span>Clave:</span> <span><xsl:value-of select="t:FacturaElectronica/t:Clave" /></span><br/>
+        <span>Consecutivo:</span> <span><xsl:value-of select="t:FacturaElectronica/t:NumeroConsecutivo" /></span><br/>
+        <span>Fecha:</span> <span><xsl:value-of select="t:FacturaElectronica/t:FechaEmision" /></span><br/>
+    </div>
+    <div>
+        <h4>Emisor</h4>
+        <span>Nombre:</span> <span><xsl:value-of select="t:FacturaElectronica/t:Emisor/t:Nombre" /></span><br/>
+        <span>Cedula:</span> <span><xsl:value-of select="t:FacturaElectronica/t:Emisor/t:Identificacion/t:Numero" /></span><br/>
+    </div>
+    <div>
+        <h4>Receptor</h4>
+        <span>Nombre:</span> <span><xsl:value-of select="t:FacturaElectronica/t:Receptor/t:Nombre" /></span><br/>
+        <span>Cedula:</span> <span><xsl:value-of select="t:FacturaElectronica/t:Receptor/t:Identificacion/t:Numero" /></span><br/>
+    </div>
+    
+    <h4>Detalle</h4>
+    <table border="1">
+      <tr bgcolor="#bbb">
+        <th>Linea</th>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+        <th>Impuesto</th>
+        <th>Total Linea</th>
+      </tr>
+      <xsl:for-each select="t:FacturaElectronica/t:DetalleServicio/t:LineaDetalle">
+      <tr>
+        <td><xsl:value-of select="t:NumeroLinea" /></td>
+        <td><xsl:value-of select="t:Codigo/t:Codigo" /></td>
+        <td><xsl:value-of select="t:Detalle" /></td>
+        <td><xsl:value-of select="t:Cantidad" /></td>
+        <td><xsl:value-of select="t:PrecioUnitario" /></td>
+        <td><xsl:value-of select="t:SubTotal" /></td>
+        <td><xsl:value-of select="t:Impuesto/t:Monto" /></td>
+        <td><xsl:value-of select="t:MontoTotalLinea" /></td>
+      </tr>
+      </xsl:for-each>
+    </table>
+    <div>
+        <h4>Resumen</h4>
+        <span>Total Exento:</span> <span><xsl:value-of select="t:FacturaElectronica/t:ResumenFactura/t:TotalExento" /></span><br/>
+        <span>Total Gravado:</span> <span><xsl:value-of select="t:FacturaElectronica/t:ResumenFactura/t:TotalGravado" /></span><br/>
+        <span>Total Impuesto:</span> <span><xsl:value-of select="t:FacturaElectronica/t:ResumenFactura/t:TotalImpuesto" /></span><br/>
+        <span>Total::</span> <span><xsl:value-of select="t:FacturaElectronica/t:ResumenFactura/t:TotalComprobante" /></span><br/>
+    </div>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet>
+
