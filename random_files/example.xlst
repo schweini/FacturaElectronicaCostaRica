@@ -6,7 +6,7 @@ xmlns:t="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectron
 
 <!-- 
     Agregar lo siguiente como segunda linea del XML: 
-    <?xml-stylesheet type="text/xsl" href="xsl.test.xsl"?> 
+    <?xml-stylesheet type="text/xsl" href="example.xsl"?> 
 -->
 
 <xsl:template match="/">
